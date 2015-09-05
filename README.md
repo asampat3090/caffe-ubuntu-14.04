@@ -7,3 +7,4 @@ This will install caffe in CPU-only mode on Ubuntu 14.04 EC2 instances.
 ```bash
 bash install.sh
 ```
+2. Remove this library - no need to keep it
