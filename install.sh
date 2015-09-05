@@ -1,7 +1,9 @@
+# setup EC2 server with requisite libs
 sudo apt-get update
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 sudo apt-get install --no-install-recommends libboost-all-dev
 
+# python dependencies
 sudo apt-get install libatlas-base-dev
 sudo apt-get install python-dev
 
@@ -9,15 +11,16 @@ sudo apt-get install python-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 # download caffe
+cd ~/
 git clone https://github.com/BVLC/caffe.git
+
+# copy over the Makefile.config file
+cp caffe-ubuntu-14.04/Makefile.config caffe/
 
 # install caffe
 cd caffe
 
-# change Makefile to Ubuntu makefile
-mv Makefile.config.ubuntu Makefile.config
-
-# make file
+# compile caffe code and test
 make all
 make test
 make runtest
