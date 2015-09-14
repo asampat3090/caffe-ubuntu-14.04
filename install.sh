@@ -36,6 +36,9 @@ bash Anaconda-2.3.0-Linux-x86_64.sh
 # delete anaconda install script
 rm Anaconda-2.3.0-Linux-x86_64.sh
 
+# update paths for current window
+source ~/.bashrc
+
 # install other python requirements
 for req in $(cat requirements.txt); do pip install $req; done
 
