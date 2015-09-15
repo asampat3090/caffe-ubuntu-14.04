@@ -1,14 +1,14 @@
 # setup EC2 server with requisite libs
-sudo apt-get update
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get --yes --force-yes update
+sudo apt-get --yes --force-yes install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get --yes --force-yes install --no-install-recommends libboost-all-dev
 
 # python dependencies
-sudo apt-get install libatlas-base-dev
-sudo apt-get install python-dev
+sudo apt-get --yes --force-yes install libatlas-base-dev
+sudo apt-get --yes --force-yes install python-dev
 
 # Dependencies for Ubuntu 14.04
-sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+sudo apt-get --yes --force-yes install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 # download caffe
 cd ~/
