@@ -12,6 +12,26 @@ sudo apt-get --yes --force-yes install python-dev
 # Dependencies for Ubuntu 14.04
 sudo apt-get --yes --force-yes install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
+#######################################################
+############## ANACONDA INSTALLATION  #################
+#######################################################
+
+# install anaconda python
+wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.3.0-Linux-x86_64.sh
+
+bash Anaconda-2.3.0-Linux-x86_64.sh -b
+
+# delete anaconda install script
+rm Anaconda-2.3.0-Linux-x86_64.sh
+
+# update paths for current window
+export PATH=/home/ubuntu/anaconda/bin:$PATH >> ~/.bashrc
+source ~/.bashrc
+
+#######################################################
+################ CAFFE INSTALLATION  ##################
+#######################################################
+
 # download caffe
 cd ~/
 git clone https://github.com/BVLC/caffe.git
@@ -27,19 +47,11 @@ make all
 make test
 make runtest
 
-# install python
+#######################################################
+############### PYCAFFE INSTALLATION  #################
+#######################################################
+
 cd python
-
-# install anaconda
-wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.3.0-Linux-x86_64.sh
-
-bash Anaconda-2.3.0-Linux-x86_64.sh -b
-
-# delete anaconda install script
-rm Anaconda-2.3.0-Linux-x86_64.sh
-
-# update paths for current window
-source ~/.bashrc
 
 # install other python requirements
 for req in $(cat requirements.txt); do pip install $req; done
