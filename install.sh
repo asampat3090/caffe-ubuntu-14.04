@@ -25,8 +25,8 @@ bash Anaconda-2.3.0-Linux-x86_64.sh -b
 rm Anaconda-2.3.0-Linux-x86_64.sh
 
 # update paths for current window
-export PATH=/home/ubuntu/anaconda/bin:$PATH >> ~/.bashrc
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/ubuntu/anaconda/lib" >> ~/.bashrc
+echo 'export PATH="/home/ubuntu/anaconda/bin:$PATH"' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/ubuntu/anaconda/lib"' >> ~/.bashrc
 source ~/.bashrc
 
 #######################################################
