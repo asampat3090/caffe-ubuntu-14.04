@@ -48,6 +48,10 @@ make all
 make test
 make runtest
 
+# add caffe path to environment
+echo 'export CAFFE_PATH="/home/ubuntu/caffe"' >> ~/.bashrc
+source ~/.bashrc
+
 #######################################################
 ############### PYCAFFE INSTALLATION  #################
 #######################################################
@@ -62,4 +66,4 @@ cd ..
 make pycaffe
 
 # add pycaffe to python path
-echo 'export PYTHONPATH="/home/ubuntu/caffe/python:$PYTHONPATH"' >> ~/.bashrc
+echo 'export PYTHONPATH="$CAFFE_PATH/python:$PYTHONPATH"' >> ~/.bashrc
