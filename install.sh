@@ -2,6 +2,7 @@
 
 # setup EC2 server with requisite libs
 sudo apt-get --yes --force-yes update
+sudo apt-get --yes --force-yes git
 sudo apt-get --yes --force-yes install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 sudo apt-get --yes --force-yes install --no-install-recommends libboost-all-dev
 
